@@ -1,3 +1,5 @@
+//Enson Palacios
+
 package PlaySongDemo;
 
 /**
@@ -23,12 +25,13 @@ public class PlayAnMP3 extends Application {
     launch(args);
   }
 
-  private int songsPlayed = 0;
+  private int songsPlayed = 0; 
 
   @Override
   public void start(Stage stage) throws Exception {
     BorderPane pane = new BorderPane();
-    String path = "songfiles/Capture.mp3";
+    //I, Enson Palacios changed the song to be played.
+    String path = "songfiles/SwingCheese.mp3";
     pane.setCenter( new Label(path));
     playASong(path);
     // Put the pane in a sized Scene and show the GUI
@@ -57,7 +60,8 @@ public class PlayAnMP3 extends Application {
   
   private class Waiter implements Runnable {
     @Override
-    public void run() {
+    public void run() { 
+    	//prints and increases count when song ends
       songsPlayed++;
       System.out.println("Song ended, play song #" + songsPlayed);
       Platform.exit();
